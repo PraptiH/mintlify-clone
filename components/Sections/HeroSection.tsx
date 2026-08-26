@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function HeroSection() {
     return (
-        <div className="grid grid-cols-24 gap-y-8 lg:gap-y-0 px-5 lg:px-0 pt-6 lg:pt-20">
+        <div className="grid grid-cols-24 gap-y-8 lg:gap-y-0 px-5 lg:px-0 pt-6 lg:pt-20 overflow-x-clip">
 
             <div className="flex flex-col gap-4 col-span-full lg:col-start-4 lg:col-end-10 lg:row-start-1">
 
@@ -44,8 +44,9 @@ export default function HeroSection() {
 
             </div>
 
-            <div className="mt-16 lg:-mt-20 col-span-full lg:col-start-11 lg:row-start-2 w-146.75 max-w-none lg:w-264.25 sm:w-[120%]">
+            <div className="relative mt-16 lg:-mt-20 col-span-full lg:col-start-11 lg:row-start-2 w-146.75 max-w-none lg:w-264.25 sm:w-[120%]">
                 <Image src={preview} alt="" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_55%,#08090a_96%)]" />
             </div>
 
         </div>
